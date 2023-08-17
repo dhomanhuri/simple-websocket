@@ -4,7 +4,7 @@ const div_display = document.querySelector(".container-pesan");
 var uname = "";
 const socket = io();
 socket.on("connect", () => {
-  uname = Math.floor(Math.random() * 1000000000) + 1;
+  uname = Math.floor(Math.random() * 10000) + 1;
   console.log("socket conne2cted " + uname);
 })
 
@@ -19,7 +19,7 @@ btn_kirim.addEventListener("click", () => {
   const bubbleChat = createBubbleChat(input.value);
   console.log(input.value);
   div_display.appendChild(bubbleChat);
-  socket.emit("kirim-pesan", input.value + " : " + uname + "anon#")
+  socket.emit("kirim-pesan", input.value + " : " + "#anonymous" + uname)
   input.value = "";
 })
 
