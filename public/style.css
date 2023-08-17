@@ -3,9 +3,17 @@
   border-radius: 10px;
   padding: 10px;
   margin-bottom: 10px;
+  height: 70vh;
+  overflow: auto;
+}
+.container-title {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 .pesan {
-  border: 2px solid blue;
+  border: 2px solid white;
   border-radius: 10px;
   padding: 5px;
   margin: 5px 0;
@@ -13,4 +21,8 @@
 .pesan-r {
   border: 2px solid red;
   text-align: right;
+}
+body {
+  background-image: url("bg.jpeg");
+  background-position: "center";
 }

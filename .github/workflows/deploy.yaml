@@ -1,0 +1,22 @@
+name: Deploy CI/CD to Server2s
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: executing deploy to server using remote ssh key
+        uses: appleboy/ssh-action@master
+        with:
+          host: "47.254.244.187"
+          username: "root"
+          password: "@Mamahmuda75"
+          port: "22"
+          script: |
+            cd /var/www/html/simple-websocket
+            git pull origin main
+            docker-compose up -d --build
