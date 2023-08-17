@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  api:
+    container_name: nodesocket_io
+    # platform: linux/amd64
+    build:
+      context: ./
+      target: nodesocket
+    ports:
+      - 300:300
+    restart: always
