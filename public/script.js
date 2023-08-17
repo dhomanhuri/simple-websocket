@@ -19,7 +19,7 @@ btn_kirim.addEventListener("click", () => {
   const bubbleChat = createBubbleChat(input.value);
   console.log(input.value);
   div_display.appendChild(bubbleChat);
-  socket.emit("kirim-pesan", input.value + " : " + uname + "anonymous#")
+  socket.emit("kirim-pesan", input.value + " : " + uname + "anon#")
   input.value = "";
 })
 
